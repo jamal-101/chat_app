@@ -1,3 +1,4 @@
+import 'package:cheating_app/core/app_route.dart';
 import 'package:cheating_app/view/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -156,7 +157,7 @@ class SignUpScreen extends StatelessWidget {
                 onTap: () {
                   if (formKey.currentState!.validate()) {
                     
-                  authController.signUP();
+                  authController.signUPMethod();
                     print(
                         "===============================user creat successfull");
                         Get.to(HomeScreen());
@@ -181,7 +182,7 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // Get.offAllNamed("/homeScreen");
+                      Get.toNamed(AppRoute.loginScreen);
                     },
                     child: const CustomText(
                       color: Colors.blue,
